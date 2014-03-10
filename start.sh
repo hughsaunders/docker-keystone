@@ -41,4 +41,5 @@ cp $WDIR/keystone.conf /etc/keystone/keystone.conf
 
 # run keystone
 pushd /var/lib/keystone
+keystone-manage db_sync
 keystone-all
