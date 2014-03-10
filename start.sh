@@ -4,6 +4,7 @@ WDIR=/docker
 
 #create mysql db
 MYSQL_AUTH="-uadmin -p$MYSQL_PASS -h$DB_PORT_3306_TCP_ADDR -P$DB_PORT_3306_TCP_PORT"
+while ! mysql $MYSQL_AUTH -e 'status'; do sleep 1; done
 mysql $MYSQL_AUTH -e "create database if not exists keystone;"
 mysql $MYSQL_AUTH -e "delete from mysql.user where user = 'keystone'"
 mysql $MYSQL_AUTH -e "flush privileges"
