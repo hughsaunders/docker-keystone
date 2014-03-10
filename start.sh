@@ -20,7 +20,7 @@ sub_config(){
 
 map=(
   "MYSQL_USER,keystone"
-  "MYSQL_PASS,secrete"
+  "MYSQL_PASSWORD,secrete"
   "MYSQL_HOST,${DB_PORT_3306_TCP_ADDR}"
   "MYSQL_PORT,${DB_PORT_3306_TCP_PORT}"
   "MYSQL_DB_NAME,keystone"
