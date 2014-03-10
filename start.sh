@@ -15,7 +15,7 @@ sub_config(){
   file="$1"
   marker="$2"
   value="$3"
-  sed -i $file 's/%'${marker}'%/'${value}'/g'
+  sed -i -e 's/%'${marker}'%/'${value}'/g' $file
 }
 
 map=(
