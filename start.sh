@@ -34,10 +34,6 @@ done
 #Copy config file into place
 cp $WDIR/keystone.conf.processed /etc/keystone/keystone.conf
 
-
-
-
-
 # run keystone
 pushd /var/lib/keystone
 keystone-all
