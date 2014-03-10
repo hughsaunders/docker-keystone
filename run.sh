@@ -8,4 +8,4 @@ KEYSTONE_CONTAINER_NAME=keystone
 docker run -d -P -name $MYSQL_CONTAINER_NAME -e MYSQL_PASS="$MYSQL_PASS" tutum/mysql
 
 # start keystone container
-dock run -d -P -name $KEYSTONE_CONTAINER_NAME -e MYSQL_PASS="$MYSQL_PASS" -link $MYSQL_CONTAINER_NAME:db hughsaunders/keystone
+docker run -d -P -name $KEYSTONE_CONTAINER_NAME -e MYSQL_PASS="$MYSQL_PASS" -link $MYSQL_CONTAINER_NAME:db hughsaunders/keystone
