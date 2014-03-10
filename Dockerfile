@@ -2,9 +2,9 @@
 FROM ubuntu:precise
 MAINTAINER Hugh Saunder <hugh@wherenow.org>
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install python-software-properties
-RUN add-apt-repository -y cloud-archive:havana && apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install keystone python-keystoneclient
-
-CMD cd /var/lib/keystone; keystone-all
+ADD build.sh /docker/build.sh
+ADD start.sh /docker/start.sh
+RUN /docker/build.sh
+CMD /docker/start.sh
 EXPOSE 35357 5000
 
