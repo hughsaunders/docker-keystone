@@ -32,7 +32,7 @@ do
   marker=${line%,*}
   value=${line#*,}
   echo "Marker: $marker, value: $value"
-  sub_config $WDIR/keystone.conf $maker $value
+  sub_config $WDIR/keystone.conf $marker $value
 done
 
 #Copy config file into place
