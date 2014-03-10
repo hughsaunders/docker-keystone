@@ -16,7 +16,7 @@ sub_config(){
   sed $file 's/%'${marker}'%/'${value}'/g' > $file.processed
 }
 
-map = (
+map=(
   "MYSQL_USER,keystone",
   "MYSQL_PASS,secrete",
   "MYSQL_HOST,${DB_PORT_3306_TCP_ADDR}"
