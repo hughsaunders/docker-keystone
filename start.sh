@@ -30,6 +30,7 @@ for line in ${map[@]}
 do
   marker=${line%,*}
   value=${line#*,}
+  echo "Marker: $marker, value: $value"
   sub_config $WDIR/keystone.conf $maker $value
 done
 
